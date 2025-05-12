@@ -1,0 +1,42 @@
+{
+  "cli": {
+    "version": ">= 3.12.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true,
+        "buildConfiguration": "Debug",
+        "image": "latest"
+      },
+      "android": {
+        "gradleCommand": ":app:assembleDebug"
+      }
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle",
+        "image": "latest"
+      },
+      "ios": {
+        "image": "latest"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios":{
+        "appleId": "info.hestia365@gmail.com",
+        "ascAppId": "6449668965",
+        "appleTeamId": "AP8G73P9MR"
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,99 @@
+{
+  "expo": {
+    "name": "1QR",
+    "slug": "shubh",
+    "scheme": "oneqrscan",
+    "version": "11.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/1qr_scan_logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/scan_splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#20b001"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to upload as a profile picture."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow 1QR Addendance App to access your camera inorder to scan the QR code."
+        }
+      ],
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Allow 1QR Addendance App to access your camera inorder to scan the QR code."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow 1QR Addendance App to access your location inorder to cross check with your office location."
+        }
+      ],
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "PORTRAIT_UP"
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bitcode": false,
+      "bundleIdentifier": "com.shubh997.shubh",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Your description here",
+        "NSCameraUsageDescription": "Allow 1QR Addendance App to access your camera inorder to scan the QR code.",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone"
+      },
+      "runtimeVersion": "5.0.0"
+    },
+    "android": {
+      "versionCode": 24,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/1qr_scan_logo_circle.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.shubh997.shubh",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE"
+      ],
+      "runtimeVersion": {
+        "policy": "sdkVersion"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "aad01228-c8e8-414a-ac78-d7ef22e2f445"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/aad01228-c8e8-414a-ac78-d7ef22e2f445"
+    }
+  }
+}
